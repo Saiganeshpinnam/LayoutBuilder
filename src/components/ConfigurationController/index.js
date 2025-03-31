@@ -9,20 +9,20 @@ import './index.css'
 
 class ConfigurationController extends Component {
   state = {showContent: true, showLeftNavbar: true, showRightNavbar: true}
-  onToggleShowContent = prevState => {
-    this.setState({
+  onToggleShowContent = () => {
+    this.setState(prevState => ({
       showContent: !prevState.showContent,
-    })
+    }))
   }
-  onToggleShowLeftNavbar = prevState => {
-    this.setState({
+  onToggleShowLeftNavbar = () => {
+    this.setState(prevState => ({
       showLeftNavbar: !prevState.showLeftNavbar,
-    })
+    }))
   }
-  onToggleShowRightNavbar = prevState => {
-    this.setState({
+  onToggleShowRightNavbar = () => {
+    this.setState(prevState => ({
       showRightNavbar: !prevState.showRightNavbar,
-    })
+    }))
   }
 
   render() {
@@ -57,23 +57,25 @@ class ConfigurationController extends Component {
               const onToggleRightNavbar = event => {
                 onToggleRightNavbar(event.target.value)
               }
-              ;<div className="config-bg-container">
-                <h1 className="layout-heading">Layout</h1>
-                <ul>
-                  <li onClick={onToggleContent}>
-                    <input type="checkbox" id="content" />
-                    <label htmlFor="content">Content</label>
-                  </li>
-                  <li onClick={onToggleLeftNavbar}>
-                    <input type="checkbox" id="left-navbar" />
-                    <label htmlFor="left-navbar">Left Navbar</label>
-                  </li>
-                  <li onClick={onToggleRightNavbar}>
-                    <input type="checkbox" id="right-navbar" />
-                    <label htmlFor="right-navbar">Right Navbar</label>
-                  </li>
-                </ul>
-              </div>
+              return (
+                <div className="config-bg-container">
+                  <h1 className="layout-heading">Layout</h1>
+                  <ul>
+                    <li onClick={onToggleContent}>
+                      <input type="checkbox" id="content" />
+                      <label htmlFor="content">Content</label>
+                    </li>
+                    <li onClick={onToggleLeftNavbar}>
+                      <input type="checkbox" id="left-navbar" />
+                      <label htmlFor="left-navbar">Left Navbar</label>
+                    </li>
+                    <li onClick={onToggleRightNavbar}>
+                      <input type="checkbox" id="right-navbar" />
+                      <label htmlFor="right-navbar">Right Navbar</label>
+                    </li>
+                  </ul>
+                </div>
+              )
             }}
           </ConfigurationContext.Consumer>
 
