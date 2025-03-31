@@ -1,0 +1,34 @@
+/* Write your CSS here */
+.body-bg-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.left-navbar-container {
+  background-color: #e2e8f0;
+  height: 100%;
+  width: 30%;
+}
+.content-container {
+  background-color: #f1f5f9;
+  height: 100%;
+  width: 30%;
+}
+.right-navbar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 30%;
+}
+.ad-container {
+  height: 180px;
+  width: 180px;
+  border-style: solid;
+  border-color: #475569;
+  color: #475569;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
